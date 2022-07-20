@@ -1,0 +1,8 @@
+.for-seller {
+  &__img {
+    @include screen-desktop {
+      width: 429px;
+      height: 474px;
+    }
+  }
+}

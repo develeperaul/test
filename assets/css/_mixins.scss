@@ -1,0 +1,14 @@
+$desktop: theme("screens.d");
+$desktop1920: theme("screens.1920");
+
+@mixin screen-desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin screen-desktop1920 {
+  @media screen and (min-width: $desktop1920) {
+    @content;
+  }
+}

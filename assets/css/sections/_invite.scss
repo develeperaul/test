@@ -1,0 +1,23 @@
+.invite {
+  &__img {
+    @include screen-desktop {
+      width: 479px;
+      height: 592px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @apply gap-y-4;
+    @include screen-desktop {
+      @apply gap-y-5;
+    }
+    & > li {
+      @apply gap-x-3.25;
+      display: flex;
+      @include screen-desktop {
+        @apply gap-x-4;
+      }
+    }
+  }
+}

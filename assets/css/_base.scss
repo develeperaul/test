@@ -1,0 +1,47 @@
+@layer base {
+  %h {
+    line-height: $linehight;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-gothampro;
+    font-weight: normal;
+    color: $black;
+    @apply text-xs8;
+    @include screen-desktop {
+      @apply text-sm3;
+    }
+  }
+  h1 {
+    @apply font-bitter text-lg;
+    @include screen-desktop {
+      @apply text-lg4;
+    }
+  }
+  h2 {
+    @apply font-bitter text-md;
+    @include screen-desktop {
+      @apply text-lg2;
+    }
+    // font-size: 2.5rem;
+    // line-height: 3rem;
+  }
+  h3 {
+    @apply font-bitter text-sm7;
+    @include screen-desktop {
+      @apply text-sm10;
+    }
+    // font-size: 1.25rem;
+    // line-height: 130%;
+  }
+  h4 {
+    @apply font-gothampro font-medium text-sm3;
+    @include screen-desktop {
+      @apply text-sm10;
+    }
+    // font-size: 1.125rem;
+    // line-height: 130%;
+  }
+}

@@ -1,0 +1,41 @@
+.card {
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #2c2c2c;
+  border-radius: $roundedLG;
+  width: 17.25rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+  padding-top: 1.4375rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 1.3125rem;
+  text-align: center;
+  @include screen-desktop {
+    width: 23.75rem;
+    height: 15.9375rem;
+    padding-top: 3.4375rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2.9375rem;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__text {
+    @apply text-xs7 mt-1 d:text-sm3 d:mt-1.5;
+  }
+}
+
+.card-news {
+  border-radius: $roundedLG;
+  padding: theme("spacing[5]") theme("spacing[4.25]");
+  background: $white;
+  text-align: left;
+}

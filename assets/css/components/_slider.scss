@@ -1,0 +1,76 @@
+.slider {
+  padding: theme("spacing.10") 0;
+  //   padding-left: theme("spacing.mobile");
+  &__wrapper {
+    width: calc(100% + theme("spacing.mobile"));
+    @include screen-desktop {
+      max-width: fit-content;
+      width: calc(100% + theme("spacing.desktop"));
+      //   max-width: calc(theme("screens.d") + theme("spacing.desktop"));
+    }
+    // @include screen-desktop1920 {
+    //   width: calc(100% + theme("spacing.desktop"));
+    //   max-width: calc(theme("screens.1920") + theme("spacing.desktop"));
+    // }
+  }
+}
+
+.swiper-fraction {
+  @apply text-white text-sm9  font-bold d:text-sm9;
+  .swiper-pagination-current {
+    @apply text-md5 d:text-lg3;
+  }
+}
+
+.navigation {
+  @apply hidden d:flex gap-6.25;
+  & > * {
+    width: 30px;
+    height: 30px;
+    border-radius: 9999px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-prev {
+    transform: rotate(180deg);
+  }
+  .swiper-next,
+  .swiper-prev {
+    cursor: pointer;
+    //   & > svg > path {
+    //     //   fill: $black;
+    //   }
+  }
+}
+.swiper-button-disabled {
+  & > svg > path {
+    fill: #a4a3a3;
+  }
+}
+
+.swiper-paginate {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  .numb {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    border: 0.7px solid $black;
+    @include screen-desktop {
+      width: 12px;
+      height: 12px;
+    }
+    &-active {
+      background-color: $black;
+    }
+  }
+}
+
+.learnSwiper {
+  @include screen-desktop {
+    width: 1008px;
+  }
+}

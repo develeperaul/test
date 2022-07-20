@@ -1,0 +1,151 @@
+@layer utilities {
+  .button {
+    @apply font-gothampro;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120.19%;
+    width: 100%;
+    @include screen-desktop {
+      min-width: 8.625rem;
+      width: initial;
+    }
+
+    &-round {
+      &__md {
+        padding: 12px 20px;
+        border-radius: $roundedMD;
+      }
+    }
+
+    &__noround {
+      min-width: auto;
+    }
+    &__round {
+      padding: 10px;
+      border-radius: $rounded;
+      @include screen-desktop {
+        padding: 17px 40px;
+      }
+      &_sm {
+        padding: 10px;
+        border-radius: $rounded;
+        @include screen-desktop {
+          padding: 16px 32px;
+        }
+      }
+    }
+    &_primary {
+      box-shadow: 0px 4px 4px rgba(121, 69, 243, 0.05);
+
+      @apply bg-primary text-white;
+    }
+
+    &__border {
+      border-width: 1.5px;
+      border-style: solid;
+      &_primary {
+        border-color: $primary;
+        background-color: #fff;
+      }
+      &_text-primary {
+        color: $primary;
+      }
+    }
+    &__gradient {
+      color: $white;
+      background: $gradient;
+    }
+  }
+  .header {
+    @apply pt-m-header-t;
+    @include screen-desktop {
+      @apply pt-d-header-t;
+    }
+  }
+  .section {
+    &_space-t--first {
+      @apply mt-m-f-section;
+      @include screen-desktop {
+        @apply mt-d-f-section;
+      }
+    }
+    &_space-t {
+      @apply mt-m-section;
+      @include screen-desktop {
+        @apply mt-d-section;
+      }
+    }
+    &__title,
+    &__text {
+      @include screen-desktop {
+        text-align: center;
+      }
+    }
+  }
+  .footer {
+    background: $primary;
+    padding-top: theme("spacing.footer-m-t");
+    padding-bottom: theme("spacing.footer-m-b");
+    margin-top: theme("spacing.[15]");
+    color: $white;
+    @include screen-desktop {
+      padding-top: theme("spacing.footer-d-t");
+      padding-bottom: theme("spacing.footer-d-b");
+      margin-top: theme("spacing.[25]");
+    }
+  }
+  .nav {
+    display: none;
+    @include screen-desktop {
+      display: flex;
+      gap: 1.5625rem;
+    }
+    & > a {
+      @apply text-xs5 text-nav;
+    }
+  }
+
+  .valute-button {
+    @apply flex gap-3.25 items-center py-2.75 px-3.75 rounded;
+    border: 1px solid transparent;
+    max-width: 7rem;
+    width: 100%;
+    max-height: 2.75rem;
+    &_active {
+      border: 1px solid $black;
+    }
+  }
+
+  .bg-gradient {
+    background: $gradient;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 3.25rem;
+    @include screen-desktop {
+      width: 3.9375rem;
+    }
+    &__img {
+      width: 1.7819rem;
+      @include screen-desktop {
+        width: 3.2738rem;
+      }
+    }
+    &__text {
+      @apply font-gothampro text-xs;
+      font-weight: 900;
+      line-height: 100%;
+      color: #212d51;
+      @include screen-desktop {
+        @apply text-xs3;
+      }
+      &_white {
+        color: $white;
+      }
+    }
+  }
+}
